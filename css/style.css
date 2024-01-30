@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.01);
+}
+header{
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgba(90, 84, 84, 0.2);
+}
+.item__menu{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    line-height: 24px;
+}
+.header__content{
+    display: flex;
+    height: 39px;
+    gap: 25px;
+    padding-top: 5px;
+}
+.container{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.header__logo{
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 16.76px;
+    text-transform: uppercase;
+}
+.profile__content
+{
+    display: flex;
+    padding-top: 5px;
+    margin-left: auto;
+}
+.profile__out{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    line-height: 24px;
+}
+.img__profile__outer
+{
+    width: 24px;
+    height: 24px;
+}
+.movies{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.movie{
+    position: relative;
+}
+.movie__cover-inner{
+    display: inline-block;
+    position: relative;
+    gap: 16px;
+    height: 450px;
+}
+.movie_cover{
+    max-width: 100%;
+    height: 100%;
+}
+.movie__info
+{
+    padding: 10px 0px;
+    font-family: 'Inter', sans-serif;
+}
+.movie__title
+{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(36, 20, 20, 1);
+}
+.movie__subtitle
+{
+    padding: 5px 0px 0px 0px;
+    color: rgba(99, 112, 131, 1);
+    font-size: 14px;
+}
+.checked
+{
+    padding: 15px 0px 0px 0px;
+    color: orange;
+}
+.check
+{
+    color: grey;
+}
+.movie__average
+{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(99, 112, 131, 1);
+    padding: 3px 0px 0px 0px;
+}
+.movie__category
+{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 12px;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    background-color: rgba(245, 245, 248, 1);
+    border-radius: 8px 0px 0px 0px;
+}
+.category__name
+{
+    font-family: 'Inter', sans-serif;
+    line-height: 15px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+}
+.category__details
+{
+    font-family: 'Inter', sans-serif;
+    line-height: 15px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+}
