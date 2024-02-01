@@ -71,11 +71,11 @@ seatElements.forEach(seat => {
 });
 
 // info_film
-
 const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get('id');
+const API_Films_Info = `https://shift-backend.onrender.com/cinema/film/${movieId}`
 
-getMovieser(API_Films_Today);
+getMovieser(API_Films_Info);
 async function getMovieser(url) {
     const response = await fetch(url, {
         headers: {
@@ -83,29 +83,28 @@ async function getMovieser(url) {
         }
     });
     const responseData = await response.json();
-    openInfoFilm(responseData, movieId);
+    openInfoFilm(responseData);
 }
 
-
-function openInfoFilm(data, id) {
+function openInfoFilm(data) {
     const infoFilm = document.querySelector(".container__about__film");
-    const moviesElem = document.querySelector(".movies");
-    const selectedMovie = data.films.find(movie => movie.id === movieId);
-    data.films.forEach((movie) => {
-        const movieElem = document.createElement("div")
-        movieElem.classList.add("movie")
-        infoFilm.innerHTML = `
+
+    const info_f = data.film;
+
+    const infoFilm2 = document.createElement("div")
+    infoFilm2.classList.add("info_f")
+    infoFilm2.innerHTML = `
         <div class="block__info__film">
-                <img src="${selectedMovie.img}"
+                <img src="${info_f.img}"
                     class="img__block__info" />
-                <div class="movie__category">
-                    <div class="category__name">${selectedMovie.genres.slice(0, 3)}</div>
-                    <div class="category__details"></div>
+                <div class="movie__category__info">
+                    <div class="category__name__info">${info_f.genres.slice(0, 3)}</div>
+                    <div class="category__details__info"></div>
                 </div>
             </div>
-            <div class="discription">
-                <span class="name__film">${selectedMovie.name}</span>
-                <div class="subtitle__film">${selectedMovie.originalName}</div>
+            <div class="discription__info">
+                <span class="name__film__info">${info_f.name}</span>
+                <div class="subtitle__film__info">${info_f.originalName}</div>
                 <link rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <span class="fa fa-star checked"></span>
@@ -113,9 +112,9 @@ function openInfoFilm(data, id) {
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star check"></span>
-                <div class="movie__average">Kinopoisk - ${selectedMovie.userRatings.kinopoisk}</div>
-                <div class="specifiction__film">${selectedMovie.description}</div>
+                <div class="movie__average__info">Kinopoisk - ${info_f.userRatings.kinopoisk}</div>
+                <div class="specifiction__film__info">${info_f.description}</div>
             </div>
             `
-    });
+    infoFilm.appendChild(infoFilm2);
 }
