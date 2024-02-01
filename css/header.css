@@ -52,7 +52,6 @@ header{
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    justify-content: space-between;
 }
 .header__logo{
     text-decoration: none;
@@ -66,6 +65,7 @@ header{
 {
     display: flex;
     padding-top: 5px;
+    margin-left: auto;
 }
 .profile__out{
     font-family: 'Inter', sans-serif;
