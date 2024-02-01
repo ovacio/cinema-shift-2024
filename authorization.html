@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/authorization.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://raw.githubusercontent.com/debabin/shift-backend/main/static/images/cinema/film_1.webp">
+    <link rel="preconnect"
+        href="https://raw.githubusercontent.com/debabin/shift-backend/main/static/images/cinema/film_1.webp">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inter&display=swap" rel="stylesheet">
-    <title>Кинотеатр</title>
+    <title>Авторизация</title>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <div class="header__content">
                 <a href="index.html" class="header__logo">Шифт <p>Cinema</p></a>
                 <div class="item__menu">
-                    <a href="authorization.html" class="item__menu2">Профиль</a>
+                    <a href="index.html" class="item__menu">Профиль</a>
                     <a href="index.html" class="item__menu">Билеты</a>
                 </div>
             </div>
@@ -35,10 +36,17 @@
             </div>
         </div>
     </header>
-
-   <div class="container"> 
-        <div class="movies"></div>
-        <script src="js/js.js"></script>
+    <div class="modal">
+        <div class="title">Авторизация</div>
+        <div class="auto">
+            <div class="auto__text">Введите номер телефона для входа в личный кабинет</div>
+            <label id="phone_number"><input type="text" />
+                <span>Телефон</span>
+            </label>
+            <div class="button">Продолжить</div>
+        </div>
+        </div>
     </div>
 </body>
+
 </html>
